@@ -37,8 +37,11 @@ namespace shipping_quote_for_a_package
             }
             //if the package dimensions and weight are lesser then 50 a calculated amount will be displayed to the user
             //for the shipping cost.
-            decimal Total = yourpackagewidth * yourpackageheight * yourpackagelength * yourpackageweight / 100.00m;
-            Console.WriteLine("Your estimated total for shipping this package is: $" + Total + " Thank you!");
+            else
+            {
+                decimal Total = yourpackagewidth * yourpackageheight * yourpackagelength * yourpackageweight / 100.00m;
+                Console.WriteLine("Your estimated total for shipping this package is: $" + Total + " Thank you!");
+            }
             Console.ReadLine();
         }
     }
